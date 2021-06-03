@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Vue Element Admin',
+  title: 'Quantum DNS Filter',
 
   /**
    * @type {boolean} true | false
