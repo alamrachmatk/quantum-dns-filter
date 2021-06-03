@@ -44,7 +44,8 @@ export default {
   methods: {
     getTotalIpAddressDayList() {
       axios
-      .get('http://localhost:1323/apiv1/totalipaddressdaylist')
+      //.get('http://localhost:1323/apiv1/totalipaddressdaylist')
+      .get('http://175.106.13.24:1323/apiv1/totalipaddressdaylist')
       .then(response => { 
           var arrDayName = []
           var arrTotal = []

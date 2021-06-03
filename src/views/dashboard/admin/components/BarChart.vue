@@ -49,7 +49,8 @@ export default {
   methods: {
      getTotalDnsDayList() {
       axios
-      .get('http://localhost:1323/apiv1/totaldnsdaylist')
+      //.get('http://localhost:1323/apiv1/totaldnsdaylist')
+      .get('http://175.106.13.24:1323/apiv1/totaldnsdaylist')
       .then(response => { 
           var arrDayName = []
            var arrTotal = []

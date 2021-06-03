@@ -1,0 +1,259 @@
+warning: LF will be replaced by CRLF in src/components/Charts/MixChart.vue.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/views/toprequest/admin/components/PieChart.vue.
+The file will have its original line endings in your working directory
+[1mdiff --git a/src/components/Charts/MixChart.vue b/src/components/Charts/MixChart.vue[m
+[1mindex 3ddb8a9..98f5a27 100644[m
+[1m--- a/src/components/Charts/MixChart.vue[m
+[1m+++ b/src/components/Charts/MixChart.vue[m
+[36m@@ -50,7 +50,8 @@[m [mexport default {[m
+   methods: {[m
+     getTotalRequestList() {[m
+       axios[m
+[31m-      .get('http://localhost:1323/apiv1/totalrequestlist')[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/totalrequestlist')[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/totalrequestlist')[m
+       .then(response => { [m
+           var arrTime = [][m
+           var arrTotal = [][m
+[1mdiff --git a/src/layout/components/Navbar.vue b/src/layout/components/Navbar.vue[m
+[1mindex e810fd9..a67f703 100644[m
+[1m--- a/src/layout/components/Navbar.vue[m
+[1m+++ b/src/layout/components/Navbar.vue[m
+[36m@@ -24,18 +24,12 @@[m
+           <i class="el-icon-caret-bottom" />[m
+         </div>[m
+         <el-dropdown-menu slot="dropdown">[m
+[31m-          <router-link to="/profile/index">[m
+[32m+[m[32m          <router-link to="">[m
+             <el-dropdown-item>Profile</el-dropdown-item>[m
+           </router-link>[m
+           <router-link to="/">[m
+             <el-dropdown-item>Dashboard</el-dropdown-item>[m
+           </router-link>[m
+[31m-          <a target="_blank" href="https://github.com/PanJiaChen/vue-element-admin/">[m
+[31m-            <el-dropdown-item>Github</el-dropdown-item>[m
+[31m-          </a>[m
+[31m-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">[m
+[31m-            <el-dropdown-item>Docs</el-dropdown-item>[m
+[31m-          </a>[m
+           <el-dropdown-item divided @click.native="logout">[m
+             <span style="display:block;">Log Out</span>[m
+           </el-dropdown-item>[m
+[1mdiff --git a/src/views/dashboard/admin/components/BarChart.vue b/src/views/dashboard/admin/components/BarChart.vue[m
+[1mindex 07571cf..b343723 100644[m
+[1m--- a/src/views/dashboard/admin/components/BarChart.vue[m
+[1m+++ b/src/views/dashboard/admin/components/BarChart.vue[m
+[36m@@ -49,7 +49,8 @@[m [mexport default {[m
+   methods: {[m
+      getTotalDnsDayList() {[m
+       axios[m
+[31m-      .get('http://localhost:1323/apiv1/totaldnsdaylist')[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/totaldnsdaylist')[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/totaldnsdaylist')[m
+       .then(response => { [m
+           var arrDayName = [][m
+            var arrTotal = [][m
+[1mdiff --git a/src/views/dashboard/admin/components/PanelGroup.vue b/src/views/dashboard/admin/components/PanelGroup.vue[m
+[1mindex a1fcf23..7a5a6ba 100644[m
+[1m--- a/src/views/dashboard/admin/components/PanelGroup.vue[m
+[1m+++ b/src/views/dashboard/admin/components/PanelGroup.vue[m
+[36m@@ -73,7 +73,8 @@[m [mexport default {[m
+   },[m
+   methods: {[m
+      getTotalDns() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totaldns';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totaldns';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totaldns';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[36m@@ -87,7 +88,8 @@[m [mexport default {[m
+             })[m
+      },[m
+      getTotalBlock() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totalblock';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totalblock';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totalblock';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[36m@@ -101,7 +103,8 @@[m [mexport default {[m
+             })[m
+      },[m
+      getTotalDnsBlock() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totaldnsblock';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totaldnsblock';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totaldnsblock';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[36m@@ -115,7 +118,8 @@[m [mexport default {[m
+             })[m
+      },[m
+      getTotalIpAddress() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totalipaddress';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totalipaddress';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totalipaddress';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[1mdiff --git a/src/views/dashboard/admin/components/TransactionTable.vue b/src/views/dashboard/admin/components/TransactionTable.vue[m
+[1mindex 9189c2a..75f7cb7 100644[m
+[1m--- a/src/views/dashboard/admin/components/TransactionTable.vue[m
+[1m+++ b/src/views/dashboard/admin/components/TransactionTable.vue[m
+[36m@@ -28,7 +28,8 @@[m [mexport default {[m
+   },[m
+   methods: {[m
+     fetchData() {[m
+[31m-      let url = 'http://localhost:1323/apiv1/totaltopmostactivelist';[m
+[32m+[m[32m      //let url = 'http://localhost:1323/apiv1/totaltopmostactivelist';[m
+[32m+[m[32m      let url = 'http://175.106.13.24:1323/apiv1/totaltopmostactivelist';[m
+       let promise = axios.get([m
+         url[m
+       )[m
+[1mdiff --git a/src/views/dashboard/admin/index.vue b/src/views/dashboard/admin/index.vue[m
+[1mindex 804bf66..be77310 100644[m
+[1m--- a/src/views/dashboard/admin/index.vue[m
+[1m+++ b/src/views/dashboard/admin/index.vue[m
+[36m@@ -61,7 +61,8 @@[m [mexport default {[m
+   methods: {[m
+     getTotalIpAddressDayList() {[m
+       axios[m
+[31m-      .get('http://localhost:1323/apiv1/totalipaddressdaylist')[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/totalipaddressdaylist')[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/totalipaddressdaylist')[m
+       .then(response => { [m
+           var arrDayName = [][m
+           var arrTotal = [][m
+[1mdiff --git a/src/views/dns/index.vue b/src/views/dns/index.vue[m
+[1mindex fb1f4d3..6821d95 100644[m
+[1m--- a/src/views/dns/index.vue[m
+[1m+++ b/src/views/dns/index.vue[m
+[36m@@ -194,7 +194,8 @@[m [mexport default {[m
+       }[m
+       this.listLoading = true[m
+        axios[m
+[31m-      .get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination + search)[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination + search)[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination + search)[m
+       .then(response => { [m
+           this.list = response.data.data[m
+           this.total = response.data.meta.total[m
+[1mdiff --git a/src/views/login/index.vue b/src/views/login/index.vue[m
+[1mindex 2590640..1ffce56 100644[m
+[1m--- a/src/views/login/index.vue[m
+[1m+++ b/src/views/login/index.vue[m
+[36m@@ -50,11 +50,7 @@[m
+       <div style="position:relative">[m
+         <div class="tips">[m
+           <span>Username : admin</span>[m
+[31m-          <span>Password : any</span>[m
+[31m-        </div>[m
+[31m-        <div class="tips">[m
+[31m-          <span style="margin-right:18px;">Username : editor</span>[m
+[31m-          <span>Password : any</span>[m
+[32m+[m[32m          <span>Password : admin</span>[m
+         </div>[m
+ [m
+         <el-button class="thirdparty-button" type="primary" @click="showDialog=true">[m
+[1mdiff --git a/src/views/table/complex-table.vue b/src/views/table/complex-table.vue[m
+[1mindex a4b7f85..8e90586 100644[m
+[1m--- a/src/views/table/complex-table.vue[m
+[1m+++ b/src/views/table/complex-table.vue[m
+[36m@@ -214,7 +214,8 @@[m [mexport default {[m
+     getList() {[m
+       this.listLoading = true[m
+        axios[m
+[31m-      .get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination)[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination)[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination)[m
+       .then(response => { [m
+           this.list = response.data.data[m
+           this.total = response.data.meta.total[m
+[1mdiff --git a/src/views/toprequest/admin/components/PanelGroup.vue b/src/views/toprequest/admin/components/PanelGroup.vue[m
+[1mindex 8de74a5..f26c86e 100644[m
+[1m--- a/src/views/toprequest/admin/components/PanelGroup.vue[m
+[1m+++ b/src/views/toprequest/admin/components/PanelGroup.vue[m
+[36m@@ -73,7 +73,8 @@[m [mexport default {[m
+   },[m
+   methods: {[m
+      getTotalDns() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totaldns';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totaldns';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totaldns';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[36m@@ -87,7 +88,8 @@[m [mexport default {[m
+             })[m
+      },[m
+      getTotalBlock() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totalblock';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totalblock';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totalblock';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[36m@@ -101,7 +103,8 @@[m [mexport default {[m
+             })[m
+      },[m
+      getTotalDnsBlock() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totaldnsblock';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totaldnsblock';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totaldnsblock';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[36m@@ -115,7 +118,8 @@[m [mexport default {[m
+             })[m
+      },[m
+      getTotalIpAddress() {[m
+[31m-        let url = 'http://localhost:1323/apiv1/totalipaddress';[m
+[32m+[m[32m        //let url = 'http://localhost:1323/apiv1/totalipaddress';[m
+[32m+[m[32m        let url = 'http://175.106.13.24:1323/apiv1/totalipaddress';[m
+         let promise = axios.get([m
+             url[m
+         )[m
+[1mdiff --git a/src/views/toprequest/admin/components/PieChart.vue b/src/views/toprequest/admin/components/PieChart.vue[m
+[1mindex 856752e..59db99e 100644[m
+[1m--- a/src/views/toprequest/admin/components/PieChart.vue[m
+[1m+++ b/src/views/toprequest/admin/components/PieChart.vue[m
+[36m@@ -51,7 +51,8 @@[m [mexport default {[m
+   methods: {[m
+     getTotalDnsDayList() {[m
+       axios[m
+[31m-      .get('http://localhost:1323/apiv1/totaltopmostactivelist')[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/totaltopmostactivelist')[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/totaltopmostactivelist')[m
+       .then(response => { [m
+           var arrBaseDomain = [][m
+           var arrMultiBaseDomain = [][m
+[1mdiff --git a/src/views/toprequest/admin/components/TransactionTable.vue b/src/views/toprequest/admin/components/TransactionTable.vue[m
+[1mindex 9189c2a..75f7cb7 100644[m
+[1m--- a/src/views/toprequest/admin/components/TransactionTable.vue[m
+[1m+++ b/src/views/toprequest/admin/components/TransactionTable.vue[m
+[36m@@ -28,7 +28,8 @@[m [mexport default {[m
+   },[m
+   methods: {[m
+     fetchData() {[m
+[31m-      let url = 'http://localhost:1323/apiv1/totaltopmostactivelist';[m
+[32m+[m[32m      //let url = 'http://localhost:1323/apiv1/totaltopmostactivelist';[m
+[32m+[m[32m      let url = 'http://175.106.13.24:1323/apiv1/totaltopmostactivelist';[m
+       let promise = axios.get([m
+         url[m
+       )[m
+[1mdiff --git a/src/views/toprequest/admin/index.vue b/src/views/toprequest/admin/index.vue[m
+[1mindex e4c4107..9eaf48e 100644[m
+[1m--- a/src/views/toprequest/admin/index.vue[m
+[1m+++ b/src/views/toprequest/admin/index.vue[m
+[36m@@ -44,7 +44,8 @@[m [mexport default {[m
+   methods: {[m
+     getTotalIpAddressDayList() {[m
+       axios[m
+[31m-      .get('http://localhost:1323/apiv1/totalipaddressdaylist')[m
+[32m+[m[32m      //.get('http://localhost:1323/apiv1/totalipaddressdaylist')[m
+[32m+[m[32m      .get('http://175.106.13.24:1323/apiv1/totalipaddressdaylist')[m
+       .then(response => { [m
+           var arrDayName = [][m
+           var arrTotal = [][m

@@ -50,7 +50,8 @@ export default {
   methods: {
     getTotalRequestList() {
       axios
-      .get('http://localhost:1323/apiv1/totalrequestlist')
+      //.get('http://localhost:1323/apiv1/totalrequestlist')
+      .get('http://175.106.13.24:1323/apiv1/totalrequestlist')
       .then(response => { 
           var arrTime = []
           var arrTotal = []

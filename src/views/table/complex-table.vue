@@ -214,7 +214,8 @@ export default {
     getList() {
       this.listLoading = true
        axios
-      .get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination)
+      //.get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination)
+      .get('http://175.106.13.24:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination)
       .then(response => { 
           this.list = response.data.data
           this.total = response.data.meta.total

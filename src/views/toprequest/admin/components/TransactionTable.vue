@@ -28,7 +28,8 @@ export default {
   },
   methods: {
     fetchData() {
-      let url = 'http://localhost:1323/apiv1/totaltopmostactivelist';
+      //let url = 'http://localhost:1323/apiv1/totaltopmostactivelist';
+      let url = 'http://175.106.13.24:1323/apiv1/totaltopmostactivelist';
       let promise = axios.get(
         url
       )

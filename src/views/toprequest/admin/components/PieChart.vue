@@ -51,7 +51,8 @@ export default {
   methods: {
     getTotalDnsDayList() {
       axios
-      .get('http://localhost:1323/apiv1/totaltopmostactivelist')
+      //.get('http://localhost:1323/apiv1/totaltopmostactivelist')
+      .get('http://175.106.13.24:1323/apiv1/totaltopmostactivelist')
       .then(response => { 
           var arrBaseDomain = []
           var arrMultiBaseDomain = []

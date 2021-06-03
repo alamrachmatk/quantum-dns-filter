@@ -73,7 +73,8 @@ export default {
   },
   methods: {
      getTotalDns() {
-        let url = 'http://localhost:1323/apiv1/totaldns';
+        //let url = 'http://localhost:1323/apiv1/totaldns';
+        let url = 'http://175.106.13.24:1323/apiv1/totaldns';
         let promise = axios.get(
             url
         )
@@ -87,7 +88,8 @@ export default {
             })
      },
      getTotalBlock() {
-        let url = 'http://localhost:1323/apiv1/totalblock';
+        //let url = 'http://localhost:1323/apiv1/totalblock';
+        let url = 'http://175.106.13.24:1323/apiv1/totalblock';
         let promise = axios.get(
             url
         )
@@ -101,7 +103,8 @@ export default {
             })
      },
      getTotalDnsBlock() {
-        let url = 'http://localhost:1323/apiv1/totaldnsblock';
+        //let url = 'http://localhost:1323/apiv1/totaldnsblock';
+        let url = 'http://175.106.13.24:1323/apiv1/totaldnsblock';
         let promise = axios.get(
             url
         )
@@ -115,7 +118,8 @@ export default {
             })
      },
      getTotalIpAddress() {
-        let url = 'http://localhost:1323/apiv1/totalipaddress';
+        //let url = 'http://localhost:1323/apiv1/totalipaddress';
+        let url = 'http://175.106.13.24:1323/apiv1/totalipaddress';
         let promise = axios.get(
             url
         )

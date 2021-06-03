@@ -194,7 +194,8 @@ export default {
       }
       this.listLoading = true
        axios
-      .get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination + search)
+      //.get('http://localhost:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination + search)
+      .get('http://175.106.13.24:1323/apiv1/dns?page='+this.listQuery.page+'&limit='+this.listQuery.limit+'&pagination='+this.listQuery.pagination + search)
       .then(response => { 
           this.list = response.data.data
           this.total = response.data.meta.total
