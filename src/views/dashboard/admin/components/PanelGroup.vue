@@ -33,7 +33,7 @@
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            DNS BLOCKLIST
+            DNS BLOCK
           </div>
           <count-to :start-val="0" :end-val="totalDnsBlock" :duration="3200" class="card-panel-num" />
         </div>
