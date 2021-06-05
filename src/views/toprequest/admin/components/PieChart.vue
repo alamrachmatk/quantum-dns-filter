@@ -107,7 +107,7 @@ export default {
         },
         series: [
           {
-            name: 'WEEKLY WRITE ARTICLES',
+            name: 'MOST ACTIVE DOMAIN',
             type: 'pie',
             roseType: 'radius',
             radius: [15, 95],

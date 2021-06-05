@@ -7,7 +7,7 @@
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            DNS
+            SITES
           </div>
           <count-to :start-val="0" :end-val="totalDns" :duration="2600" class="card-panel-num" />
         </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            DNS BLOCK
+            SITES BLOCK
           </div>
           <count-to :start-val="0" :end-val="totalDnsBlock" :duration="3200" class="card-panel-num" />
         </div>
